@@ -1,0 +1,23 @@
+function generateSlice() {
+  const input = document.getElementById("promptInput").value;
+  const output = document.getElementById("outputText");
+
+  if (input.trim() === "") {
+    output.innerText = "⚠️ Please enter something first.";
+    return;
+  }
+
+  // Fake AI Response (Free Plan Simulation)
+  const responses = [
+    "This idea can be converted into a short AI-generated slice.",
+    "Your input looks creative. Try refining it for better output.",
+    "Free plan supports basic slicing only.",
+    "AI suggests breaking this idea into 3 simple steps."
+  ];
+
+  const randomResponse =
+    responses[Math.floor(Math.random() * responses.length)];
+
+  output.innerText =
+    "Input: " + input + "\n\nAI Response: " + randomResponse;
+}
